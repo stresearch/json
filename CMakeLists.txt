@@ -4,7 +4,8 @@ cmake_minimum_required(VERSION 3.1)
 ## PROJECT
 ## name and version
 ##
-project(nlohmann_json VERSION 3.7.3 LANGUAGES CXX)
+# taa: Changed from nlohmann_json because....really?
+project(json VERSION 3.7.3 LANGUAGES CXX)
 
 ##
 ## INCLUDE
@@ -15,9 +16,10 @@ include(ExternalProject)
 ##
 ## OPTIONS
 ##
-option(JSON_BuildTests "Build the unit tests when BUILD_TESTING is enabled." ON)
+# taa: Changed defaults to what we want
+option(JSON_BuildTests "Build the unit tests when BUILD_TESTING is enabled." OFF)
 option(JSON_Install "Install CMake targets during install step." ON)
-option(JSON_MultipleHeaders "Use non-amalgamated version of the library." OFF)
+option(JSON_MultipleHeaders "Use non-amalgamated version of the library." ON)
 
 ##
 ## CONFIGURATION
